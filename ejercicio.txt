@@ -1,0 +1,35 @@
+parte 1
+com
+PoneEnCola(unElemento de tipo elemento)
+    Si ((final + 1) % tamaño del vector) = frente
+        Mostrar "Cola llena, no se puede agregar elemento"
+    Sino
+        final = (final + 1) % tamaño del vector
+        vector[final] = unElemento
+        Si frente = -1
+            frente = 0
+        FinSi
+        Mostrar "Elemento agregado a la cola"
+    FinSi
+Fin
+
+
+
+parte 2
+com
+Algoritmo QuitaDeCola()
+    Si frente = -1 y final = -1
+        Mostrar "Cola vacía, no se puede quitar ningún elemento"
+        Devolver NULL (o un valor que indique que no hay elementos)
+    Sino
+        unElemento = vector[frente]
+        Si frente = final
+            frente = -1
+            final = -1
+        Sino
+            frente = (frente + 1) % tamaño del vector
+        FinSi
+        Mostrar "Elemento quitado de la cola"
+        Devolver unElemento
+    FinSi
+Fin
